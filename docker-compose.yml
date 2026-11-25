@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+  web:
+    build: ./web
+    ports:
+      - "${PUERTO:-8081}:80"
+    depends_on:
+      - app
